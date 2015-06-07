@@ -1,0 +1,13 @@
+<ion-view view-title="{{ 'calendar.title' | translate}}">
+    <ion-content class="locales-list">
+        <div class="list card" ng-repeat="cal in calendar">
+            <div class="item item-divider">
+                {{cal.date}} - {{cal.hour}}
+            </div>
+            <div class="item item-text-wrap">
+                <div>{{cal.exponent}}</div>
+                <p>{{cal.subject}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

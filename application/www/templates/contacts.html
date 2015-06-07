@@ -1,0 +1,29 @@
+<ion-view view-title="{{ 'contacts.title' | translate}}">
+    <ion-content class="locales-list">
+        <div class="list card" ng-repeat="contact in contacts">
+
+            <div class="item item-button-right">
+                <h2>{{contact.name}}</h2>
+                <p>
+                    {{contact.occupation}}
+                </p>
+                <div class="pending-text assertive" ng-if="!contact.isContact && !contact.aproveBtn">
+                    {{'user.pending'|translate}}
+                </div>
+                <div class="skill-tags calm-bg light" ng-repeat="skill in contact.skill | limitTo:4">
+                    {{skill}}
+                </div>...
+                <a ng-if="contact.isContact && !contact.aproveBtn" ng-href="#/app/user/{{contact._id}}" class="button ion-chevron-right button-positive"></a>
+                <button ng-if="!contact.isContact && contact.aproveBtn" class="button button-positive" ng-click="acceptInvitation(contact._id,$index)">
+                    Aceptar
+                </button>
+            </div>
+
+        </div>
+        <div class="list card" ng-if="!contacts.length">
+            <div class="item">
+                Aun no tienes ningun contacto en comun!
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view view-title="{{ 'profile.title' | translate}}">
+    <ion-content>
+        <ul class="list card">
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'profile.name' | translate}}</span>
+                <input type="text" placeholder="John" ng-model="profile.name">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'profile.occupation' | translate}}</span>
+                <input type="text" placeholder="Programador - Diseñador" ng-model="profile.occupation">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'profile.phone' | translate}} (Opcional)</span>
+                <input type="tel" placeholder="261 444444" ng-model="profile.phone">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'profile.twitter' | translate}}</span>
+                <input type="text" placeholder="@twitter" ng-model="profile.twitter">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">{{'profile.email' | translate}}</span>
+                <input type="email" placeholder="john@suhr.com" ng-model="profile.email" disabled>
+            </label>
+            <button class="button button-full button-positive" ng-click="save()">
+                {{'profile.saveBtn' | translate}}
+            </button>
+        </ul>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,34 @@
+<ion-view view-title="{{ 'matches.title' | translate}}">
+    <ion-content class="locales-list">
+        <div class="list card">
+            <div class="item item-button-right">
+                <h2>{{user.name}}</h2>
+                <p>
+                    {{user.occupation}}
+                </p>
+                <div class="pending-text assertive" ng-if="!user.isContact">
+                    {{'user.pending'|translate}}
+                </div>
+            </div>
+            <div class="item tabs tabs-secondary tabs-icon-left" ng-if="user.isContact">
+                <a href="" class="tab-item" ng-click="openExternal('tel:'+user.phone)" ng-if="user.phone">
+                    <i class="icon ion-ios-telephone"></i>
+                    {{ 'user.call' | translate}}
+                </a>
+                <a href="" class="tab-item" ng-click="openExternal('https://twitter.com/'+user.twitter)" ng-if="user.twitter">
+                    <i class="icon ion-social-twitter"></i>
+                    {{ 'user.twitter' | translate}}
+                </a>
+                <a class="tab-item" href="" ng-click="openExternal('mailto:'+user.email)">
+                    <i class="icon ion-ios-email"></i>
+                    {{ 'user.sendEmail' | translate}}
+                </a>
+            </div>
+            <div class="item item-body">
+                <div class="skill-tags calm-bg light" ng-repeat="skill in user.skill">
+                    {{skill}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

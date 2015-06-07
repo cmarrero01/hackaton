@@ -1,0 +1,24 @@
+.skill-tags{
+    float: left;
+    margin: 2px;
+    padding: 2px;
+    font-size: 10px;
+    border-radius: 3px;
+}
+.pending-text{
+    font-size: 12px;
+}
+.sponsor-img{
+    position: relative;
+    height: 100%;
+    background-color: transparent !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    text-align: center;
+}
+.sponsor-img img{
+    position: relative;
+    margin-top: 30%;
+    width: 80%;
+}

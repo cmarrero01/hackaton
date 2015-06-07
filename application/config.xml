@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.hack720278" version="0.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>H!</name>
+  <description>
+        Aplicacion para la hackaton san rafael
+    </description>
+  <author email="cmarrero01@gmail.com" href="http://claudiomarrero.wordpress.com">
+        Claudio's Developers team.
+    </author>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="5000"/>
+  <preference name="orientation" value="portrait"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <platform name="android">
+    <icon src="resources\android\icon\drawable-ldpi-icon.png" density="ldpi"/>
+    <icon src="resources\android\icon\drawable-mdpi-icon.png" density="mdpi"/>
+    <icon src="resources\android\icon\drawable-hdpi-icon.png" density="hdpi"/>
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" density="xhdpi"/>
+    <icon src="resources\android\icon\drawable-xxhdpi-icon.png" density="xxhdpi"/>
+    <icon src="resources\android\icon\drawable-xxxhdpi-icon.png" density="xxxhdpi"/>
+    <splash src="resources\android\splash\drawable-port-ldpi-screen.png" density="port-ldpi"/>
+    <splash src="resources\android\splash\drawable-port-mdpi-screen.png" density="port-mdpi"/>
+    <splash src="resources\android\splash\drawable-port-hdpi-screen.png" density="port-hdpi"/>
+  </platform>
+  <platform name="browser">
+    <preference name="SplashScreen" value="resources/splash.png"/>
+    <preference name="SplashScreenDelay" value="10000"/>
+    <preference name="SplashScreenBackgroundColor" value="green"/>
+    <preference name="ShowSplashScreen" value="true"/>
+    <preference name="SplashScreenWidth" value="600"/>
+    <preference name="SplashScreenHeight" value="300"/>
+  </platform>
+  <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
+  <content src="index.html"/>
+  <access origin="*"/>
+</widget>

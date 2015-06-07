@@ -1,0 +1,25 @@
+<ion-view view-title="{{ 'matches.title' | translate}}">
+    <ion-content class="locales-list">
+        <div class="list card" ng-repeat="match in matches">
+            <div class="item item-button-right">
+                <h2>{{match.name}}</h2>
+                <p>
+                    {{match.occupation}}
+                </p>
+                <a ng-if="match.isContact" ng-href="#/app/user/{{match._id}}" class="button ion-chevron-right button-positive"></a>
+                <button ng-if="!match.isContact && !isPressed(match._id)" class="button ion-person-add button-calm" ng-click="contact(match._id)"></button>
+                <div class="pending-text assertive" ng-if="!match.isContact && isPressed(match._id)">
+                    {{'user.pending'|translate}}
+                </div>
+                <div class="skill-tags calm-bg light" ng-repeat="skill in match.skill | limitTo:4" ng-click="goSearch(skill)">
+                    {{skill}}
+                </div>...
+            </div>
+        </div>
+        <div class="list card" ng-if="!matches.length">
+            <div class="item">
+                No hemos encontrado a nadie.
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

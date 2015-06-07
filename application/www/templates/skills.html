@@ -1,0 +1,23 @@
+<ion-view view-title="{{ 'skills.title' | translate}}">
+    <ion-content>
+        <div class="list">
+            <li class="item">
+                <h4>{{ 'skills.description' | translate}}</h4>
+            </li>
+            <li class="item item-checkbox" ng-repeat="skill in skills">
+                <label class="checkbox">
+                    <input type="checkbox" ng-checked="haveSkill(skill.name)" ng-click="addSkill($event,skill.name)">
+                </label>
+                {{skill.name}}
+            </li>
+            <li class="item item-input item-button-right">
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="Escribe tu skill aqui y presiona el boton +" ng-model="new.skill">
+                </label>
+                <button class="button button-small" ng-click="addNewSkill()">
+                    <i class="icon ion-plus-round"></i>
+                </button>
+            </li>
+        </div>
+    </ion-content>
+</ion-view>
