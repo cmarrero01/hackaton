@@ -15,8 +15,6 @@ if (!window.CustomEvent) { // Create only if it doesn't exist
 environment.constant('ENV',{
     //'socket':'http://192.168.1.34:7777',
     //'http':'http://192.168.1.34:7777'
-    //'socket':'http://192.168.5.164:7777',
-    //'http':'http://192.168.5.164:7777'
-    'socket':'http://192.237.181.205:7777',
-    'http':'http://192.237.181.205:7777'
+    'socket':'http://192.168.5.164:7777',
+    'http':'http://192.168.5.164:7777'
 });

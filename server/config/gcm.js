@@ -14,6 +14,6 @@ module.exports = function(params){
     }
 
     return {
-        APIKey: 'AIzaSyB2fX-EVHL4CDqz83jfrjF6vhEARSduzQA'
+        APIKey: 'api gcm'
     };
 };

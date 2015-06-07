@@ -22,7 +22,7 @@ factories.factory('PushSvc',[
                 successHandler,
                 errorHandler,
                 {
-                    "senderID":"34865121438",
+                    "senderID":"ID_APP",
                     "ecb":"onNotification"
                 });
         }
